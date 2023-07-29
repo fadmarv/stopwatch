@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Borel&family=Caveat+Brush&family=Pacifico&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Courgette&family=Dancing+Script&family=Kaushan+Script&family=Pacifico&family=Satisfy&display=swap" rel="stylesheet">
+</head>
+<body>
+<main id="mainbody">
+    <img id="stars" src="img/christmas-stars.png" alt="">
+    <img id="stars1" src="img/christmas-stars.png" alt="">
+    <img id="stars2" src="img/christmas-stars.png" alt="">
+    <img id="stars3" src="img/christmas-stars.png" alt="">
+
+
+    <img id="leaf" src="img/leaf (1).png" alt="">
+    <img id="leaf2" src="img/leaf (2).png" alt="">
+
+    <nav id="navbar">
+        <button onclick="ham()" id="ham" class="ham"><img src="img/menu.png" alt=""></button>
+    </nav>
+    <div id="clock1" class="clockimg">
+        <img src="img/wired-flat-45-clock-time (1).gif" alt="">
+    </div>
+
+    <div id="clock2" class="clockimg2">
+        <img src="img/wired-lineal-45-clock-time.gif" alt="">
+    </div>
+    <div id="clock3" class="clockimg3">
+        <img src="img/wired-lineal-45-clock-time (1).gif" alt="">
+    </div>
+
+    <div id="clock4" class="clockimg4">
+        <img src="img/wired-lineal-45-clock-time (2).gif" alt="">
+    </div>
+    <div id="clock5" class="clockimg5">
+        <img src="img/wired-lineal-45-clock-time (3).gif" alt="">
+    </div>
+    <div id="clock6" class="clockimg6">
+        <img src="img/wired-flat-45-clock-time (2).gif" alt="">
+    </div>
+    <div id="dis" class="time">  <p id="minutes">0</p> :<p id="secod">0</p>  <p id="seconds">0</p> . <p id="milli1">0</p><p id="milli">0</p>         
+          
+
+    </div><br>
+
+    <div class="buttons">
+        <button onclick="play()"><img id="defaultplay" class="defaultplay" src="img/system-solid-26-play.gif" alt="">         <img id="arrowhead" class="arrowhead" src="img/play-button-arrowhead.png" alt="">
+            <img id="sunplay" src="img/play-button-arrowhead (3).png" alt="">
+            <img id="nightplay" src="img/play-button-arrowhead (4).png" alt="">
+            <img id="metalplay" src="img/play-button-arrowhead (5).png" alt="">
+            <img id="floralplay" src="img/play-button-arrowhead (6).png" alt="">
+
+
+        </button>
+        <button id="paus"  onclick="paus()"><img id="defaultpause" src="img/system-solid-77-pause.gif" alt="">    <img id="skypause" src="img/pause.png" alt="">
+            <img id="sunpause" src="img/pause (1).png" alt="">
+            <img id="nightpause" src="img/pause (2).png" alt="">
+            <img id="metalpause" src="img/pause (3).png" alt="">
+            <img id="floralpause" src="img/pause (4).png" alt="">
+        </button>
+        <button id="laps" onclick="laps()"><img id="defaultreload" src="img/refresh.png" alt="">
+            <img id="skyreload" src="img/reload.png" alt="">
+            <img id="sunreload" src="img/reload (1).png" alt="">
+            <img id="nightreload" src="img/reload (3).png" alt="">
+            <img id="metalreload" src="img/reload (5).png" alt="">
+            <img id="floralreload" src="img/refresh (3).png" alt="">
+        </button>
+        <button id="res" onclick="reset()"><img id="defaultrefresh" src="img/refresh (1).png" alt="">
+            <img id="skyrefresh" src="img/rotating.png" alt="">
+            <img id="sunrefresh" src="img/reload (2).png" alt="">
+            <img id="nightrefresh" src="img/reload (4).png" alt="">
+            <img id="metalrefresh" src="img/refresh (2).png" alt="">
+            <img id="floralrefresh" src="img/refresh (4).png" alt="">
+
+        </button>
+
+    </div>
+    <div id="lap">
+
+    </div>
+
+    <div id="menu" class="menu">
+        <button onclick="cancel()" id="cancel" class="cancel"> <img src="img/cancel.png" alt=""></button><br><br>
+
+        <p class="temes">Themes</p>
+        <hr>
+
+        <div class="theme-button1">
+            <button onclick="deftheme()" id="default" class="default">Default</button>
+            <button onclick="sky()" id="sky" class="sky">Sky</button>
+            <button onclick="sun()" id="sun" class="sun">Morning sun</button>
+        </div>
+
+        <div class="theme-button2">
+            <button onclick="night()" id="night" class="night">Night sky</button>
+            <button onclick="metal()" id="metallic" class="metallic">Metallic</button>
+            <button onclick="flg()" id="flag" class="flag">Floral green</button>
+        </div>
+
+
+
+    </div>
+</main>
+
+
+    <script src="main.js"></script>
+</body>
+</html>
