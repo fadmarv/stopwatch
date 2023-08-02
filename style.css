@@ -258,6 +258,22 @@ main {
     color: white;
     transition: 1s;
 }
+#runningTime {
+    height: 7vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-family: 'Caveat Brush', cursive;   
+    color: white;
+    transition: 1s;
+    background-color:  rgb(178, 221, 178);
+    border-radius: 20px;
+    width: 90vw;
+    margin: auto;
+    display: none;
+    color: black;   
+}
 .buttons {
     /* border: 1px solid black; */
     width: 99.5vw;
@@ -276,10 +292,22 @@ button {
     padding-left: 140px;
     color: white;
     font-family: sans-serif;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    row-gap: 10px;
 }
 .para {
     font-size: 25px;
-    margin-top: 5px;
+    /* margin-top: 5px; */
+    /* background-color: rgb(178, 221, 178); */
+    width: 90vw;
+    margin-left: -140px;
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+    font-weight: bolder;
+    font-family: 'Caveat Brush', cursive;  
 }
 #res {
     display: none;
@@ -696,5 +724,8 @@ hr {
         left: 60vw;
         /* z-index: 10; */
         animation: 2s leaf2 ease-in-out;
+    }
+    #runningTime {
+        width: 50vw;
     }
 }

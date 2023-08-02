@@ -5,12 +5,20 @@ var dis = document.getElementById("dis");
 var lap = document.getElementById("lap");
 var secon = document.getElementById("milli1")
 var secod = document.getElementById("secod")
+var mill = document.getElementById("mill");
+var milli2 = document.getElementById("milli2");
+var secnd = document.getElementById("secnd");
+var minu = document.getElementById("minu");
+var seod = document.getElementById("seod");
+
+
 
 
 
 
 
 var i;
+var a;
 
 function play() {
   i =  setInterval(function(){
@@ -27,7 +35,7 @@ function play() {
             seconds.innerHTML = parseInt(seconds.innerHTML) + 1;
         }
         
-        else if (seconds.innerHTML == 9) {
+        else if (seconds.innerHTML == 10) {
             seconds.innerHTML = 0;
             secod.innerHTML = parseInt(secod.innerHTML) + 1;
         }
@@ -37,30 +45,61 @@ function play() {
             seconds.innerHTML = 0;
             minutes.innerHTML = parseInt(minutes.innerHTML) + 1;
         }
-    },20)
+    },10)
 
     document.getElementById("res").style.display = "none";
     document.getElementById("paus").style.display = "inline";
     document.getElementById("laps").style.display = "inline";
 
 
+    a =  setInterval(function(){
+        mill.innerHTML = parseInt(mill.innerHTML) + 1;
+
+        if (mill.innerHTML == 9) {
+            mill.innerHTML = 0;
+            milli2.innerHTML = parseInt(milli2.innerHTML) + 1;
+        }
+
+        else if (milli2.innerHTML == 9)  {
+            mill.innerHTML = 0;
+            milli2.innerHTML = 0;
+            secnd.innerHTML = parseInt(secnd.innerHTML) + 1;
+        }
+        
+        else if (secnd.innerHTML == 10) {
+            secnd.innerHTML = 0;
+            seod.innerHTML = parseInt(seod.innerHTML) + 1;
+        }
+
+        if (seod.innerHTML == 6) {
+            seod.innerHTML = 0;
+            secnd.innerHTML = 0;
+            minu.innerHTML = parseInt(minu.innerHTML) + 1;
+        }
+    },10)
+
 }
 
 function paus() {
     clearInterval(i);
+    clearInterval(a)
     document.getElementById("res").style.display = "inline"
 
 
 }
 
 function laps() {
-    var p = document.createElement("p")
-    var txt = document.createTextNode(dis.innerText)
-    p.appendChild(txt)
-    lap.appendChild(p)
+    var p = document.createElement("p");
+    var txt = document.createTextNode(dis.innerText);
+    p.appendChild(txt);
+    lap.appendChild(p);
 
-    p.setAttribute("class","para")
-    p.setAttribute("id","pclass")
+    p.setAttribute("class","para");
+    p.setAttribute("id","pclass");
+
+    // document.getElementById("lap").style.display = "block";
+    document.getElementById("runningTime").style.display = "flex";
+
 }
 
 function reset(){
@@ -73,8 +112,9 @@ function reset(){
     document.getElementById("res").style.display = "none";
     document.getElementById("laps").style.display = "none";
     document.getElementById("paus").style.display = "none";
+    document.getElementById("lap").innerHTML = null;
+    document.getElementById("runningTime").style.display = "none";
     document.getElementById("pclass").style.display = "none";
-
 }
 
 
@@ -200,9 +240,8 @@ function sky() {
     document.getElementById("floralrefresh").style.display = "none";
     document.getElementById("leaf").style.display = "none"
     document.getElementById("leaf2").style.display = "none"
-
-
-
+    document.getElementById("runningTime").style.backgroundColor = "rgb(0, 41, 99)"
+    document.getElementById("pclass").style.color = "rgb(0, 41, 99)"
 
 }
 
@@ -396,6 +435,11 @@ function flg() {
     document.getElementById("leaf").style.display = "inline"
     document.getElementById("leaf2").style.display = "inline"
     document.getElementById("dis").style.fontFamily = "'Courgette', cursive";
+
+    document.getElementById("stars").style.display = "none";
+    document.getElementById("stars1").style.display = "none";
+    document.getElementById("stars2").style.display = "none";
+    document.getElementById("stars3").style.display = "none";
 
 
 }
